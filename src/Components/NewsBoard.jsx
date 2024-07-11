@@ -11,7 +11,7 @@ function NewsBoard({category}) {
     return ( 
         <div>
             <h2 className="text-center">Latest <span className="badge bg-danger">News</span></h2>
-            {article.map((news ,index)=>{
+            {article && article.map((news ,index)=>{
                 return <NewsItem key={index} title={news.title} description={news.description} src ={news.urlToImage} url ={news.url} />
             })}
         </div>
